@@ -1,0 +1,60 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     scalarTransportFoam;
+
+startFrom       startTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         10;
+writeControl adjustableRunTime;
+adjustTimeStep yes;
+maxCo 0.1;
+
+deltaT          0.001;
+
+// writeControl    timeStep;
+
+writeInterval   0.001;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  16;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;
+
+
+libs (
+      "libOpenFOAM.so"
+      "libsimpleSwakFunctionObjects.so"
+      "libswakFunctionObjects.so"
+      "libgroovyBC.so"
+      "libswakSourceFields.so"
+     );
+
+// ************************************************************************* //

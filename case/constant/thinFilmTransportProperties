@@ -1,0 +1,28 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+mu             mu [ 0 -1 -1 0 0 0 0 ] 0.01;                     //film viscosity
+rho          rho  [ 0 -2 0 0 0 0 0 ]  0;                                                // film density
+sigma         sigma [ 0 -3 -2 0 0 0 0]   0;                             // film surface tension
+g                g [0 0 -2 0 0 0 0] 9800;                                            //gravity
+repulsion      repulsion [0 0 0 0 0 0 0]  0.1;                                       //use in case of poisson velocity
+D_active_0  D_active_0 [0 2 -1 0 0 0 0]    5;
+D_star  D_star [0 2 -1 0 0 0 0]    5;                             //diffusion constant D_active_0 [0 2 -1 0 0 0 0] 
+blocking_exponent blocking_exponent [0 0 0 0 0 0 0] 1;                            //exponent
+
+// ************************************************************************* //
