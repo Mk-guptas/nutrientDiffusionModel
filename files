@@ -1,0 +1,3 @@
+forcedThinFilmFoamMonod.C
+
+EXE = $(FOAM_APPBIN)/forcedThinFilmFoamMonod
